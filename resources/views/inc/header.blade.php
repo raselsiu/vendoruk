@@ -58,20 +58,15 @@
                 <div class="col-xl-6 col-lg-7">
                     <nav class="header__menu">
                         <ul>
-                            <li class="active"><a href="./index.html">Home</a></li>
-                            <li><a href="#">Women’s</a></li>
-                            <li><a href="#">Men’s</a></li>
-                            <li><a href="./shop.html">Shop</a></li>
-                            <li><a href="#">Pages</a>
-                                <ul class="dropdown">
-                                    <li><a href="./product-details.html">Product Details</a></li>
-                                    <li><a href="./shop-cart.html">Shop Cart</a></li>
-                                    <li><a href="./checkout.html">Checkout</a></li>
-                                    <li><a href="./blog-details.html">Blog Details</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="./blog.html">Blog</a></li>
-                            <li><a href="./contact.html">Contact</a></li>
+                            <li><a href="/">Home</a></li>
+                            <?php
+                            
+                            // $category = App\Models\Category::orderBy('name')->get();
+                            ?>
+                            @foreach ($categories as $cat)
+                                <li><a href="/{{ $cat->slug }}">{{ $cat->name }}</a></li>
+                            @endforeach
+                            {!! menu('mainmenu', '/menus/headers') !!}
                         </ul>
                     </nav>
                 </div>

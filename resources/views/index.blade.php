@@ -7,57 +7,27 @@
             <div class="row">
                 <div class="col-lg-6 p-0">
                     <div class="categories__item categories__large__item set-bg"
-                        data-setbg="{{ asset('assets/frontend/img/categories/category-1.jpg') }}">
+                        data-setbg="{{ Voyager::Image($herosFirst->image) }}">
                         <div class="categories__text">
-                            <h1>Women’s fashion</h1>
-                            <p>Sitamet, consectetur adipiscing elit, sed do eiusmod tempor incidid-unt labore
-                                edolore magna aliquapendisse ultrices gravida.</p>
-                            <a href="#">Shop now</a>
+                            <h1>{{ $herosFirst->title }}</h1>
+                            <p>{{ $herosFirst->subtitle }}</p>
+                            <a href="{{ $herosFirst->link }}">Shop Now</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-6 p-0">
-                            <div class="categories__item set-bg"
-                                data-setbg="{{ asset('assets/frontend/img/categories/category-2.jpg') }}">
-                                <div class="categories__text">
-                                    <h4>Men’s fashion</h4>
-                                    <p>358 items</p>
-                                    <a href="#">Shop now</a>
+                        @foreach ($restOfHeros as $restHero)
+                            <div class="col-lg-6 col-md-6 col-sm-6 p-0">
+                                <div class="categories__item set-bg" data-setbg="{{ Voyager::Image($restHero->image) }}">
+                                    <div class="categories__text">
+                                        <h4>{{ $restHero->title }}</h4>
+                                        <p>{{ $restHero->subtitle }}</p>
+                                        <a href="{{ $restHero->link }}">Shop now</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 p-0">
-                            <div class="categories__item set-bg"
-                                data-setbg="{{ asset('assets/frontend/img/categories/category-3.jpg') }}">
-                                <div class="categories__text">
-                                    <h4>Kid’s fashion</h4>
-                                    <p>273 items</p>
-                                    <a href="#">Shop now</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 p-0">
-                            <div class="categories__item set-bg"
-                                data-setbg="{{ asset('assets/frontend/img/categories/category-4.jpg') }}">
-                                <div class="categories__text">
-                                    <h4>Cosmetics</h4>
-                                    <p>159 items</p>
-                                    <a href="#">Shop now</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 p-0">
-                            <div class="categories__item set-bg"
-                                data-setbg="{{ asset('assets/frontend/img/categories/category-5.jpg') }}">
-                                <div class="categories__text">
-                                    <h4>Accessories</h4>
-                                    <p>792 items</p>
-                                    <a href="#">Shop now</a>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -88,11 +58,12 @@
             <div class="row property__gallery">
                 <div class="col-lg-3 col-md-4 col-sm-6 mix women">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/product/product-1.jpg">
+                        <div class="product__item__pic set-bg"
+                            data-setbg="{{ asset('assets/frontend/img/product/product-1.jpg') }}">
                             <div class="label new">New</div>
                             <ul class="product__hover">
-                                <li><a href="img/product/product-1.jpg" class="image-popup"><span
-                                            class="arrow_expand"></span></a></li>
+                                <li><a href="{{ asset('assets/frontend/img/product/product-1.jpg') }}"
+                                        class="image-popup"><span class="arrow_expand"></span></a></li>
                                 <li><a href="#"><span class="icon_heart_alt"></span></a></li>
                                 <li><a href="#"><span class="icon_bag_alt"></span></a></li>
                             </ul>
