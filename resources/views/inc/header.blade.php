@@ -23,6 +23,8 @@
     <link rel="stylesheet" href="{{ asset('assets/frontend/css/owl.carousel.min.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ asset('assets/frontend/css/slicknav.min.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ asset('assets/frontend/css/style.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ asset('assets/frontend/css/custom.css') }}" type="text/css">
+
     @stack('css')
 </head>
 
