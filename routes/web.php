@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
+use TCG\Voyager\Facades\Voyager;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +17,10 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', [PageController::class, 'index']);
+
+
+Route::get('product-details/{slug}', [PageController::class,'showProduct'])->name('showProduct');
+
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

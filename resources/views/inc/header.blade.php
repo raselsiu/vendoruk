@@ -62,8 +62,8 @@
                         <ul>
                             <li><a href="/">Home</a></li>
                             <?php
-                            
-                            // $category = App\Models\Category::orderBy('name')->get();
+                            use App\Models\Category;
+                            $categories = Category::orderBy('order')->get();
                             ?>
                             @foreach ($categories as $cat)
                                 <li><a href="/{{ $cat->slug }}">{{ $cat->name }}</a></li>

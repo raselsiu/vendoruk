@@ -40,3 +40,55 @@ a.card-link {
 .inner_product_post > .card {
     margin-bottom: 30px;
 }
+.view_product a {
+    border: 1px solid #ededed;
+    padding: 5px 5px;
+    border-radius: 5px;
+    color: #000;
+    font-size: 14px;
+}
+.product_footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.product__item__text {
+    text-align: left;
+    padding: 10px 15px;
+}
+.product__item__text h6 {
+    height: 45px;
+}
+a.view_all_btn:hover {
+    background-color: #3f3f3f;
+    color: #fff;
+    border-radius: 5;
+    border: 0;
+}
+.jumbotron {
+    padding: 0;
+}
+.jumbotron h4 {
+    padding: 15px 20px;
+    background: #6ecf8d;
+    color: #fff;
+}
+.inner_jumb > table {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 16px;
+    margin-top: 15px;
+}
+
+.inner_jumb {
+    padding-bottom: 16px;
+}
+
+table td {
+    padding: 10px;
+}
+table.where_to_buy a {
+    background: #fff;
+    color: #000;
+    padding: 4px 7px;
+}
