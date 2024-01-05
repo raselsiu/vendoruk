@@ -35,9 +35,6 @@
     </section>
     <!-- Categories Section End -->
 
-
-
-
     <!-- Product Section Begin -->
     @isset($filterData)
         <section class="product spad">
