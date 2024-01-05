@@ -35,147 +35,31 @@
     </section>
     <!-- Categories Section End -->
 
-    <!-- Product Section Begin -->
-    <section class="product spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-4">
-                    <div class="section-title">
-                        <h4>Filter Products</h4>
-                    </div>
-                </div>
-                <div class="col-lg-8 col-md-8">
-                    <ul class="filter__controls">
-                        <li class="active" data-filter="*">All</li>
-                        <li data-filter=".women">Women’s</li>
-                        <li data-filter=".men">Men’s</li>
-                        <li data-filter=".kid">Kid’s</li>
-                        <li data-filter=".accessories">Accessories</li>
-                        <li data-filter=".cosmetic">Cosmetics</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row property__gallery">
-                <div class="col-lg-3 col-md-4 col-sm-6 mix kid">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg"
-                            data-setbg="{{ asset('assets/frontend/img/product/product-1.jpg') }}">
-                            <ul class="product__hover">
-                                <li><a href="{{ asset('assets/frontend/img/product/product-1.jpg') }}"
-                                        class="image-popup"><span class="arrow_expand"></span></a></li>
-                                <li><a href="#"><span class="icon_heart_alt"></span></a></li>
-                                <li><a href="#"><span class="icon_bag_alt"></span></a></li>
-                            </ul>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">Fit micro corduroy shirt</a></h6>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <div class="product__price">$ 59.0</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix women men kid accessories cosmetic">
-                    <div class="product__item sale">
-                        <div class="product__item__pic set-bg"
-                            data-setbg="{{ asset('assets/frontend/img/product/product-1.jpg') }}">
-                            <div class="label sale">Sale</div>
-                            <ul class="product__hover">
-                                <li><a href="{{ asset('assets/frontend/img/product/product-1.jpg') }}"
-                                        class="image-popup"><span class="arrow_expand"></span></a></li>
-                                <li><a href="#"><span class="icon_heart_alt"></span></a></li>
-                                <li><a href="#"><span class="icon_bag_alt"></span></a></li>
-                            </ul>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">Tropical Kimono</a></h6>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <div class="product__price">$ 49.0 <span>$ 59.0</span></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix women men kid accessories cosmetic">
-                    <div class="product__item">
-                        <div class="product__item__pic set-bg"
-                            data-setbg="{{ asset('assets/frontend/img/product/product-1.jpg') }}">
-                            <ul class="product__hover">
-                                <li><a href="{{ asset('assets/frontend/img/product/product-1.jpg') }}"
-                                        class="image-popup"><span class="arrow_expand"></span></a></li>
-                                <li><a href="#"><span class="icon_heart_alt"></span></a></li>
-                                <li><a href="#"><span class="icon_bag_alt"></span></a></li>
-                            </ul>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">Contrasting sunglasses</a></h6>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <div class="product__price">$ 59.0</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 mix women men kid accessories cosmetic">
-                    <div class="product__item sale">
-                        <div class="product__item__pic set-bg"
-                            data-setbg="{{ asset('assets/frontend/img/product/product-1.jpg') }}">
-                            <div class="label">Sale</div>
-                            <ul class="product__hover">
-                                <li><a href="{{ asset('assets/frontend/img/product/product-1.jpg') }}"
-                                        class="image-popup"><span class="arrow_expand"></span></a></li>
-                                <li><a href="#"><span class="icon_heart_alt"></span></a></li>
-                                <li><a href="#"><span class="icon_bag_alt"></span></a></li>
-                            </ul>
-                        </div>
-                        <div class="product__item__text">
-                            <h6><a href="#">Water resistant backpack</a></h6>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </div>
-                            <div class="product__price">$ 49.0 <span>$ 59.0</span></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Product Section End -->
 
-    <!-- Product List Upcoming -->
-    @isset($upComingProducts)
-        <section class="banner set-bg related_products_home">
+
+
+    <!-- Product Section Begin -->
+    @isset($filterData)
+        <section class="product spad">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12">
-                        <div class="products_title_bar">
-                            <div class="section-title">
-                                <h4>Upcoming Release</h4>
-                            </div>
-                            <div class="view_all_products">
-                                <a href="#" class="view_all_btn">View All</a>
-                            </div>
+                    <div class="col-lg-4 col-md-4">
+                        <div class="section-title">
+                            <h4>Filter Products</h4>
                         </div>
                     </div>
-                    @foreach ($upComingProducts as $product)
-                        <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="col-lg-8 col-md-8">
+                        <ul class="filter__controls">
+                            <li class="active" data-filter="*">All</li>
+                            @foreach ($categories as $cat)
+                                <li data-filter=".{{ $cat->slug }}">{{ $cat->name }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                </div>
+                <div class="row property__gallery">
+                    @foreach ($filterData as $key => $product)
+                        <div class="col-lg-3 col-md-4 col-sm-6 mix {{ $product->catslug }}">
                             <div class="product__item">
                                 <div class="product__item__pic set-bg"
                                     data-setbg="{{ asset('assets/frontend/img/product/related/rp-1.jpg') }}">
@@ -186,22 +70,24 @@
                                     </ul>
                                 </div>
                                 <div class="product__item__text">
-                                    <h6><a href="#">{{ $product->title }}</a></h6>
+                                    <h6><a href="#">{{ Str::limit($product->title, 50) }}</a></h6>
                                     <div class="product_footer">
                                         <div class="product__price">&#163; {{ $product->price }}</div>
                                         <div class="view_product">
-                                            <a href="">View Now</a>
+                                            <a href="{{ route('showProduct', $product->slug) }}">View Now</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     @endforeach
+
                 </div>
             </div>
         </section>
     @endisset
-    <!-- Product List Upcoming End -->
+
+    <!-- Product Section End -->
 
     <!-- Product List New Release -->
     @isset($newProducts)
@@ -211,7 +97,7 @@
                     <div class="col-lg-12 col-md-12 col-sm-12">
                         <div class="products_title_bar">
                             <div class="section-title">
-                                <h4>Upcoming Release</h4>
+                                <h4>Latest Release</h4>
                             </div>
                             <div class="view_all_products">
                                 <a href="#" class="view_all_btn">View All</a>
@@ -247,126 +133,90 @@
     @endisset
     <!-- Product List New Release End -->
 
-    {{-- Posts --}}
-    <section class="products_posts_area mr_tb_50">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12">
-                    <div class="products_title_bar">
-                        <div class="section-title">
-                            <h4>Latest News</h4>
-                        </div>
-                        <div class="view_all_products">
-                            <a href="#" class="view_all_btn">View All</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-4">
-                    <div class="inner_product_post">
-                        <div class="card">
-                            <img src="{{ asset('assets/frontend/img/blog/blog-8.jpg') }}" class="card-img-top"
-                                alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text date_time_txt">22 December 2023</p>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.</p>
+    <!-- Product List Upcoming -->
+    @isset($upComingProducts)
+        <section class="banner set-bg related_products_home">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="products_title_bar">
+                            <div class="section-title">
+                                <h4>Upcoming Release</h4>
                             </div>
-                            <div class="card-footer text-center">
-                                <a href="#" class="card-link">Read More..</a>
+                            <div class="view_all_products">
+                                <a href="#" class="view_all_btn">View All</a>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-4">
-                    <div class="inner_product_post">
-                        <div class="card">
-                            <img src="{{ asset('assets/frontend/img/blog/blog-8.jpg') }}" class="card-img-top"
-                                alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text date_time_txt">22 December 2023</p>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.</p>
-                            </div>
-                            <div class="card-footer text-center">
-                                <a href="#" class="card-link">Read More..</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-4">
-                    <div class="inner_product_post">
-                        <div class="card">
-                            <img src="{{ asset('assets/frontend/img/blog/blog-8.jpg') }}" class="card-img-top"
-                                alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text date_time_txt">22 December 2023</p>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.</p>
-                            </div>
-                            <div class="card-footer text-center">
-                                <a href="#" class="card-link">Read More..</a>
+                    @foreach ($upComingProducts as $product)
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="product__item">
+                                <div class="product__item__pic set-bg"
+                                    data-setbg="{{ asset('assets/frontend/img/product/related/rp-1.jpg') }}">
+                                    {{-- <div class="label new">New</div> --}}
+                                    <ul class="product__hover">
+                                        <li><a href="{{ asset('assets/frontend/img/product/related/rp-1.jpg') }}"
+                                                class="image-popup"><span class="arrow_expand"></span></a></li>
+                                    </ul>
+                                </div>
+                                <div class="product__item__text">
+                                    <h6><a href="#">{{ $product->title }}</a></h6>
+                                    <div class="product_footer">
+                                        <div class="product__price">&#163; {{ $product->price }}</div>
+                                        <div class="view_product">
+                                            <a href="{{ route('showProduct', $product->slug) }}">View Now</a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    @endforeach
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-4">
-                    <div class="inner_product_post">
-                        <div class="card">
-                            <img src="{{ asset('assets/frontend/img/blog/blog-8.jpg') }}" class="card-img-top"
-                                alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text date_time_txt">22 December 2023</p>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.</p>
-                            </div>
-                            <div class="card-footer text-center">
-                                <a href="#" class="card-link">Read More..</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-4">
-                    <div class="inner_product_post">
-                        <div class="card">
-                            <img src="{{ asset('assets/frontend/img/blog/blog-8.jpg') }}" class="card-img-top"
-                                alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text date_time_txt">22 December 2023</p>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.</p>
-                            </div>
-                            <div class="card-footer text-center">
-                                <a href="#" class="card-link">Read More..</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-4">
-                    <div class="inner_product_post">
-                        <div class="card">
-                            <img src="{{ asset('assets/frontend/img/blog/blog-8.jpg') }}" class="card-img-top"
-                                alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text date_time_txt">22 December 2023</p>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.</p>
-                            </div>
-                            <div class="card-footer text-center">
-                                <a href="#" class="card-link">Read More..</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
-        </div>
-    </section>
+        </section>
+    @endisset
+    <!-- Product List Upcoming End -->
+
+
+    {{-- Posts --}}
+    @isset($news)
+        <section class="products_posts_area mr_tb_50">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="products_title_bar">
+                            <div class="section-title">
+                                <h4>Latest News</h4>
+                            </div>
+                            <div class="view_all_products">
+                                <a href="#" class="view_all_btn">View All</a>
+                            </div>
+                        </div>
+                    </div>
+                    @foreach ($news as $post)
+                        <div class="col-lg-4 col-md-4 col-sm-4">
+                            <div class="inner_product_post">
+                                <div class="card">
+                                    <img src="{{ Voyager::Image($post->image) }}" class="card-img-top"
+                                        alt="{{ $post->title }}">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{ Str::limit($post->title, 55, '...') }}</h5>
+                                        <p class="card-text date_time_txt">
+                                            {{ date('jS F Y g:i A', strtotime($post->created_at)) }}
+                                        </p>
+                                        <p class="card-text">{{ strip_tags(Str::limit($post->description, 160)) }}</p>
+                                    </div>
+                                    <div class="card-footer text-center">
+                                        <a href="" class="card-link">Read More..</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </section>
+    @endisset
     {{-- Posts End --}}
 
     <!-- Trend Section Begin -->

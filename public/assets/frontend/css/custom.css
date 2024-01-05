@@ -72,6 +72,7 @@ a.view_all_btn:hover {
     padding: 15px 20px;
     background: #6ecf8d;
     color: #fff;
+    border-radius: 5px;
 }
 .inner_jumb > table {
     width: 100%;
@@ -91,4 +92,21 @@ table.where_to_buy a {
     background: #fff;
     color: #000;
     padding: 4px 7px;
+}
+.tag-lists {
+    display: flex;
+}
+.tag-lists h5 {
+    margin-right: 15px;
+}
+.tag-lists span {
+    background: #ededed;
+    margin: 0px 5px;
+    padding: 0px 7px;
+}
+.inner_product_post img {
+    max-height: 230px;
+}
+p.card-text.date_time_txt {
+    color: #e76b6b;
 }
